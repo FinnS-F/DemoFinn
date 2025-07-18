@@ -2,14 +2,149 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finn's Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            color: #333;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        header {
+            text-align: center;
+            background-color: #2d2d2d;
+            color: #fff;
+            padding: 50px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #336699;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            display: block;
+            margin: 30px auto;
+            width: 250px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2d2d2d;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Finn
-    </h1>
+
+    <header>
+        <h1>Finn</h1>
+        <p>Software Developer | Lifelong Learner</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            A recent graduate with a degree in Computing in ANU and a passion for developing user-friendly web
+            applications.
+            Experienced with Agile/Scrum methodologies and modern development tools, including IDEs and version control
+            systems. Eager to improve user experience through creative and methodical problem-solving. Strong
+            communication
+            skills, able to explain complex issues clearly. Enthusiastic about contributing to a team environment,
+            particularly
+            using AWS cloud services, with a flexible approach to both remote and in-office collaboration.
+        </p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Software Developer</strong> at IDUNNO Company (2023–Present)</li>
+            <li><strong>Market Research Intern</strong> at You-know-Where Lab (1970)</li>
+        </ul>
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li><a href="#">Traveling</a></li>
+            <li><a href="#">Reading</a></li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:letsguess@gmail.com">letsguess@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/idunno">github.com/idunno</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/idunno">linkedin.com/in/idunno</a></p>
+    </section>
+
+    <img src="images/my profile.png" alt="A photo of me" />
+
+    <footer>
+        &copy; 2025 Finn. All rights reserved.
+    </footer>
+
 </body>
 
 </html>
