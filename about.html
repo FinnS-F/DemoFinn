@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            color: #333;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #336699;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section
+        style="max-width:400px;margin:40px auto;padding:20px;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align:center;color:#336699;">Calculator</h2>
+        <input id="num1" type="number" placeholder="First number" style="width:45%;padding:8px;margin:5px;">
+        <input id="num2" type="number" placeholder="Second number" style="width:45%;padding:8px;margin:5px;">
+        <div style="text-align:center;margin:10px 0;">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('/')">/</button>
+        </div>
+        <div id="result" style="text-align:center;font-size:1.2em;color:#29639c;margin-top:10px;"></div>
+    </section>
+
+    <script>
+        function calculate(op) {
+            const n1 = parseFloat(document.getElementById('num1').value);
+            const n2 = parseFloat(document.getElementById('num2').value);
+            let res = '';
+            if (isNaN(n1) || isNaN(n2)) {
+                res = 'Please enter both numbers.';
+            } else {
+                switch (op) {
+                    case '+': res = n1 + n2; break;
+                    case '-': res = n1 - n2; break;
+                    case '*': res = n1 * n2; break;
+                    case '/':
+                        res = n2 !== 0 ? (n1 / n2) : 'Cannot divide by zero';
+                        break;
+                }
+            }
+            document.getElementById('result').textContent = 'Result: ' + res;
+        }
+    </script>
+
+    <H1>About This Website</H1>
+    <p>This is reserved for our project introduction</p>
+</body>
+
+</html>

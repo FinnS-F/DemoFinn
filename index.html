@@ -65,6 +65,22 @@
             text-decoration: underline;
         }
 
+        button {
+            background-color: #336699;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            margin: 8px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #25496e;
+        }
+
         img {
             display: block;
             margin: 30px auto;
@@ -96,54 +112,56 @@
 </head>
 
 <body>
-
-    <header>
-        <h1>Finn</h1>
-        <p>Software Developer | Lifelong Learner</p>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            A recent graduate with a degree in Computing in ANU and a passion for developing user-friendly web
-            applications.
-            Experienced with Agile/Scrum methodologies and modern development tools, including IDEs and version control
-            systems. Eager to improve user experience through creative and methodical problem-solving. Strong
-            communication
-            skills, able to explain complex issues clearly. Enthusiastic about contributing to a team environment,
-            particularly
-            using AWS cloud services, with a flexible approach to both remote and in-office collaboration.
-        </p>
+    <!-- Add this inside your <body>, where you want the chart to appear -->
+    <section id="charts">
+        <h2>My Chart Example</h2>
+        <canvas id="myChart" width="400" height="200"></canvas>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Software Developer</strong> at IDUNNO Company (2023–Present)</li>
-            <li><strong>Market Research Intern</strong> at You-know-Where Lab (1970)</li>
-        </ul>
-    </section>
+    <!-- Add this before the closing </body> tag -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <section id="hobbies">
-        <h2>Hobbies</h2>
-        <ul>
-            <li><a href="#">Traveling</a></li>
-            <li><a href="#">Reading</a></li>
-        </ul>
-    </section>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'pie', // Change to 'pie'
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: 'Demo Data',
+                    data: [10, 10, 10, 10, 10, 10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderColor: [
+                        '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:letsguess@gmail.com">letsguess@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/idunno">github.com/idunno</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/idunno">linkedin.com/in/idunno</a></p>
+    <section id="navigation" style="text-align:center; margin-top: 20px;">
+        <a href="about.html"><button>About Me</button></a>
+        <a href="projects.html"><button>Projects</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+        <a href="register.html"
+            style="color: white; text-decoration: none; position: absolute; top: 20px; right: 20px;"><button>Register</button></a>
     </section>
-
-    <img src="images/my profile.png" alt="A photo of me" />
 
     <footer>
         &copy; 2025 Finn. All rights reserved.
     </footer>
+
 
 </body>
 
